@@ -14,15 +14,15 @@ const Nav: React.FC = () => {
         target="_blank"
         href="https://uniswap.info/pair/0xce84867c3c02b05dc570d0135103d3fb9cc19433"
       >
-        Sushiswap uAR-ETH
+        Ubiquityswap uAR-ETH
       </StyledLink>
       <StyledLink target="_blank" href="https://discord.gg/hJ2p555">
         Discord
       </StyledLink>
-      <StyledLink target="_blank" href="https://github.com/sushiswap">
+      <StyledLink target="_blank" href="https://github.com/endOfCycleParty">
         Github
       </StyledLink>
-      <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+      <StyledLink target="_blank" href="https://twitter.com/endOfCycleParty">
         Twitter
       </StyledLink>
     </StyledNav>

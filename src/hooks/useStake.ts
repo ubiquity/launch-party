@@ -1,13 +1,13 @@
 import { useCallback } from 'react'
 
-import useSushi from './useSushi'
+import useUbiquity from './useUbiquity'
 import { useWallet } from 'use-wallet'
 
-import { stake, getMasterChefContract } from '../sushi/utils'
+import { stake, getMasterChefContract } from '../ubiquity/utils'
 
 const useStake = (pid: number) => {
   const { account } = useWallet()
-  const sushi = useSushi()
+  const sushi = useUbiquity()
 
   const handleStake = useCallback(
     async (amount: string) => {

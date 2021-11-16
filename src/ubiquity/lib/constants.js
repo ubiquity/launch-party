@@ -39,8 +39,8 @@ export const addressMap = {
 };
 
 export const addressMapStables = {
-  sushiswapFactory: undefined,
-  sushiswapFactoryV2: undefined,
+  endOfCyclePartyFactory: undefined,
+  endOfCyclePartyFactoryV2: undefined,
   uAR: undefined,
   uAD: undefined,
   UBQ: undefined,
@@ -96,7 +96,7 @@ export const supportedPools = [
     tokenAddresses: {
       1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
     },
-    name: 'Sushi Party!',
+    name: 'Ubiquity Party!',
     symbol: 'uAR-ETH UNI-V2 LP',
     tokenSymbol: 'uAR',
     icon: '🍣',

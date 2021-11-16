@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import chef from '../../assets/img/chef.png'
+import ubiquity from '../../assets/img/ubiquity.png'
 import Button from '../../components/Button'
 import Container from '../../components/Container'
 import Page from '../../components/Page'
@@ -12,9 +12,9 @@ const Home: React.FC = () => {
   return (
     <Page>
       <PageHeader
-        icon={<img src={chef} height={120} />}
-        title="MasterChef is Ready"
-        subtitle="Stake Sushiswap LP tokens to claim your very own yummy uAR!"
+        icon={<img src={ubiquity} height={120} />}
+        title="End-Of-Cycle-Party is Ready"
+        subtitle="Stake Ubiquityswap LP tokens to claim your very own yummy uAR!"
       />
 
       <Container>

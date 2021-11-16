@@ -16,7 +16,7 @@ const GAS_LIMIT = {
 export const getMasterChefAddress = (sushi) => {
   return sushi && sushi.masterChefAddress
 }
-export const getSushiAddress = (sushi) => {
+export const getUbiquityAddress = (sushi) => {
   return sushi && sushi.sushiAddress
 }
 export const getWethContract = (sushi) => {
@@ -26,7 +26,7 @@ export const getWethContract = (sushi) => {
 export const getMasterChefContract = (sushi) => {
   return sushi && sushi.contracts && sushi.contracts.masterChef
 }
-export const getSushiContract = (sushi) => {
+export const getUbiquityContract = (sushi) => {
   return sushi && sushi.contracts && sushi.contracts.sushi
 }
 
@@ -70,7 +70,7 @@ export const getPoolWeight = async (masterChefContract, pid) => {
 }
 
 export const getEarned = async (masterChefContract, pid, account) => {
-  return masterChefContract.methods.pendingSushi(pid, account).call()
+  return masterChefContract.methods.pendingUbiquity(pid, account).call()
 }
 
 export const getTotalLPWethValue = async (
@@ -122,7 +122,7 @@ export const approve = async (lpContract, masterChefContract, account) => {
     .send({ from: account })
 }
 
-export const getSushiSupply = async (sushi) => {
+export const getUbiquitySupply = async (sushi) => {
   return new BigNumber(await sushi.contracts.sushi.methods.totalSupply().call())
 }
 

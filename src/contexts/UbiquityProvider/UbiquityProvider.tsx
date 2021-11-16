@@ -2,35 +2,35 @@ import React, { createContext, useEffect, useState } from 'react'
 
 import { useWallet } from 'use-wallet'
 
-import { Sushi } from '../../sushi'
+import { Ubiquity } from '../../ubiquity'
 
-export interface SushiContext {
-  sushi?: typeof Sushi
+export interface UbiquityContext {
+  ubiquity?: typeof Ubiquity
 }
 
-export const Context = createContext<SushiContext>({
-  sushi: undefined,
+export const Context = createContext<UbiquityContext>({
+  ubiquity: undefined,
 })
 
 declare global {
   interface Window {
-    sushisauce: any
+    ubiquitysauce: any
   }
 }
 
-const SushiProvider: React.FC = ({ children }) => {
+const UbiquityProvider: React.FC = ({ children }) => {
   const { ethereum }: { ethereum: any } = useWallet()
-  const [sushi, setSushi] = useState<any>()
+  const [ubiquity, setUbiquity] = useState<any>()
 
   // @ts-ignore
-  window.sushi = sushi
+  window.ubiquity = ubiquity
   // @ts-ignore
   window.eth = ethereum
 
   useEffect(() => {
     if (ethereum) {
       const chainId = Number(ethereum.chainId)
-      const sushiLib = new Sushi(ethereum, chainId, false, {
+      const ubiquityLib = new Ubiquity(ethereum, chainId, false, {
         defaultAccount: ethereum.selectedAddress,
         defaultConfirmations: 1,
         autoGasMultiplier: 1.5,
@@ -40,12 +40,12 @@ const SushiProvider: React.FC = ({ children }) => {
         accounts: [],
         ethereumNodeTimeout: 10000,
       })
-      setSushi(sushiLib)
-      window.sushisauce = sushiLib
+      setUbiquity(ubiquityLib)
+      window.ubiquitysauce = ubiquityLib
     }
   }, [ethereum])
 
-  return <Context.Provider value={{ sushi }}>{children}</Context.Provider>
+  return <Context.Provider value={{ ubiquity }}>{children}</Context.Provider>
 }
 
-export default SushiProvider
+export default UbiquityProvider

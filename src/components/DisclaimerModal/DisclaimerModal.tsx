@@ -44,7 +44,7 @@ const DisclaimerModal: React.FC<DisclaimerModal> = ({
     } else {
       return (
         <div>
-          <p>Attention uAR Sushiswap LPs</p>
+          <p>Attention uAR Ubiquityswap LPs</p>
           <p>
             The only Uniswap pool that is compatible with uAR is uAR/yCRV
             (Curve yPool tokens)

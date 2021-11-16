@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import chef from '../../assets/img/chef.png'
+import ubiquity from '../../assets/img/ubiquity.png'
 
 import { useParams } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
@@ -13,11 +13,11 @@ import WalletProviderModal from '../../components/WalletProviderModal'
 
 import useModal from '../../hooks/useModal'
 
-import useSushi from '../../hooks/useSushi'
+import useUbiquity from '../../hooks/useUbiquity'
 import useFarm from '../../hooks/useFarm'
 import useRedeem from '../../hooks/useRedeem'
 import { getContract } from '../../utils/erc20'
-import { getMasterChefContract } from '../../sushi/utils'
+import { getMasterChefContract } from '../../ubiquity/utils'
 
 import Harvest from './components/Harvest'
 import Stake from './components/Stake'
@@ -30,7 +30,7 @@ const Farm: React.FC = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const sushi = useSushi()
+  const sushi = useUbiquity()
   const { ethereum } = useWallet()
 
   // const lpContract = useMemo(() => {
@@ -52,9 +52,9 @@ const Farm: React.FC = () => {
       {!!account ? (
         <>
           <PageHeader
-            icon={<img src={chef} height="120" />}
-            title="Stake Sushi Tokens & Earn Fees"
-            subtitle="0.05% of all SushiSwap trades are rewarded to uAR stakers"
+            icon={<img src={ubiquity} height="120" />}
+            title="Stake Ubiquity Tokens & Earn Fees"
+            subtitle="0.05% of all UbiquitySwap trades are rewarded to uAR stakers"
           />
           {/* <FarmCards /> */}
           <div>TBD</div>

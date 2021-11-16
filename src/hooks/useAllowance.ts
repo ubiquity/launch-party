@@ -1,18 +1,18 @@
 import { useCallback, useEffect, useState } from 'react'
 
 import BigNumber from 'bignumber.js'
-import useSushi from './useSushi'
+import useUbiquity from './useUbiquity'
 import { useWallet } from 'use-wallet'
 import { provider } from 'web3-core'
 import { Contract } from 'web3-eth-contract'
 
 import { getAllowance } from '../utils/erc20'
-import { getMasterChefContract } from '../sushi/utils'
+import { getMasterChefContract } from '../ubiquity/utils'
 
 const useAllowance = (lpContract: Contract) => {
   const [allowance, setAllowance] = useState(new BigNumber(0))
   const { account }: { account: string; ethereum: provider } = useWallet()
-  const sushi = useSushi()
+  const sushi = useUbiquity()
   const masterChefContract = getMasterChefContract(sushi)
 
   const fetchAllowance = useCallback(async () => {

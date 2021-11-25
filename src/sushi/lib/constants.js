@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js/bignumber'
+import chef from '../../assets/img/chef.png'
 
 export const SUBTRACT_GAS_LIMIT = 100000
 
@@ -36,7 +37,7 @@ export const addressMap = {
   COMP: '0xc00e94Cb662C3520282E6f5717214004A7f26888',
   LEND: '0x80fB784B7eD66730e8b1DBd9820aFD29931aab03',
   SUSHIYCRV: '0x2C7a51A357d5739C5C74Bf3C96816849d2c9F726',
-};
+}
 
 export const addressMapStables = {
   sushiswapFactory: undefined,
@@ -54,8 +55,7 @@ export const addressMapStables = {
   DAI: undefined,
   USDC: undefined,
   USDT: undefined,
-};
-
+}
 
 export const contractAddresses = {
   sushi: {
@@ -86,240 +86,177 @@ UNI-V2 LP Address on mainnet for reference
 11 YFI  0x2fdbadf3c4d5a8666bc06645b8358ab803996e28
 12 uAR 0xce84867c3c02b05dc570d0135103d3fb9cc19433
 */
+/*
+{
+  pid: 12,
+  lpAddresses: {
+    1: '0xce84867c3c02b05dc570d0135103d3fb9cc19433',
+  },
+  tokenAddresses: {
+    1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+  },
+  name: 'Sushi Party!',
+  symbol: 'uAR-ETH UNI-V2 LP',
+  tokenSymbol: 'uAR',
+  icon: '🍣',
+},
+*/
 
 export const supportedPools = [
   {
-    pid: 12,
-    lpAddresses: {
-      1: '0xce84867c3c02b05dc570d0135103d3fb9cc19433',
-    },
-    tokenAddresses: {
-      1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
-    },
-    name: 'Sushi Party!',
-    symbol: 'uAR-ETH UNI-V2 LP',
-    tokenSymbol: 'uAR',
-    icon: '🍣',
-  },
-  {
-    pid: 0,
-    lpAddresses: {
-      1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
-    },
-    tokenAddresses: {
-      1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-    },
-    name: 'Tether Turtle',
-    symbol: 'USDT-ETH UNI-V2 LP',
-    tokenSymbol: 'USDT',
-    icon: '🐢',
-  },
-  {
     pid: 1,
     lpAddresses: {
-      1: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc',
+      1: '0x0f644658510c95cb46955e55d7ba9dda9e9fbec6', // not found, leaving uAD address for now as a placeholder
     },
     tokenAddresses: {
-      1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+      1: '0x0f644658510c95cb46955e55d7ba9dda9e9fbec6',
     },
-    name: 'Circle Snail',
-    symbol: 'USDC-ETH UNI-V2 LP',
-    tokenSymbol: 'USDC',
-    icon: '🐌',
+    name: 'Ubiquity Algorithmic Dollar',
+    symbol: 'uAD-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'uAD',
+    icon: '🚜',
   },
   {
     pid: 2,
     lpAddresses: {
-      1: '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11',
+      1: '0x0f644658510c95cb46955e55d7ba9dda9e9fbec6', // not found, leaving uAD address for now as a placeholder
     },
     tokenAddresses: {
-      1: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      1: '0x4e38d89362f7e5db0096ce44ebd021c3962aa9a0',
     },
-    name: 'Donald DAI',
-    symbol: 'DAI-ETH UNI-V2 LP',
-    tokenSymbol: 'DAI',
-    icon: '🦆',
+    name: 'Ubiquity',
+    symbol: 'UBQ-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'UBQ',
+    icon: '🚜',
   },
   {
     pid: 3,
     lpAddresses: {
-      1: '0xf80758ab42c3b07da84053fd88804bcb6baa4b5c',
+      1: '0x279ca79d5fb2490721512c8ae4767e249d75f41b', // https://analytics.sushi.com/pairs/0x279ca79d5fb2490721512c8ae4767e249d75f41b
     },
     tokenAddresses: {
-      1: '0x57ab1ec28d129707052df4df418d58a2d46d5f51',
+      1: '0x5f98805A4E8be255a32880FDeC7F6728C6568bA0',
     },
-    name: 'Spartan Dollar',
-    symbol: 'SUSD-ETH UNI-V2 LP',
-    tokenSymbol: 'SUSD',
-    icon: '🦍',
-  },
-  {
-    pid: 7,
-    lpAddresses: {
-      1: '0x88d97d199b9ed37c29d846d00d443de980832a22',
-    },
-    tokenAddresses: {
-      1: '0x04fa0d235c4abf4bcf4787af4cf447de572ef828',
-    },
-    name: 'Umami Squid',
-    symbol: 'UMA-ETH UNI-V2 LP',
-    tokenSymbol: 'UMA',
-    icon: '🦑',
-  },
-  {
-    pid: 9,
-    lpAddresses: {
-      1: '0xf421c3f2e695c2d4c0765379ccace8ade4a480d9',
-    },
-    tokenAddresses: {
-      1: '0xba11d00c5f74255f56a5e366f4f77f5a186d7f55',
-    },
-    name: 'Band-osaurus',
-    symbol: 'BAND-ETH UNI-V2 LP',
-    tokenSymbol: 'BAND',
-    icon: '🦖',
-  },
-  {
-    pid: 8,
-    lpAddresses: {
-      1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974',
-    },
-    tokenAddresses: {
-      1: '0x514910771af9ca656af840dff83e8264ecf986ca',
-    },
-    name: 'Toadie Marine',
-    symbol: 'LINK-ETH UNI-V2 LP',
-    tokenSymbol: 'LINK',
-    icon: '🐸',
-  },
-  {
-    pid: 10,
-    lpAddresses: {
-      1: '0xc5be99a02c6857f9eac67bbce58df5572498f40c',
-    },
-    tokenAddresses: {
-      1: '0xd46ba6d942050d489dbd938a2c909a5d5039a161',
-    },
-    name: 'Ample Chicks',
-    symbol: 'AMPL-ETH UNI-V2 LP',
-    tokenSymbol: 'AMPL',
-    icon: '🐥',
+    name: 'LUSD Stablecoin',
+    symbol: 'LUSD-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'LUSD',
+    icon: '🚜',
   },
   {
     pid: 4,
     lpAddresses: {
-      1: '0xcffdded873554f362ac02f8fb1f02e5ada10516f',
+      1: '0xfffae4a0f4ac251f4705717cd24cadccc9f33e06', // https://analytics.sushi.com/pairs/0xfffae4a0f4ac251f4705717cd24cadccc9f33e06
     },
     tokenAddresses: {
-      1: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+      1: '0x383518188c0c6d7730d91b2c03a03c837814a899',
     },
-    name: 'Compound Truffle',
-    symbol: 'COMP-ETH UNI-V2 LP',
-    tokenSymbol: 'COMP',
-    icon: '🍄',
+    name: 'Olympus',
+    symbol: 'OHM-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'OHM',
+    icon: '🚜',
   },
   {
     pid: 5,
     lpAddresses: {
-      1: '0xab3f9bf1d81ddb224a2014e98b238638824bcf20',
+      1: '0x07d5695a24904cc1b6e3bd57cc7780b90618e3c4', // https://analytics.sushi.com/pairs/0x07d5695a24904cc1b6e3bd57cc7780b90618e3c4
     },
     tokenAddresses: {
-      1: '0x80fb784b7ed66730e8b1dbd9820afd29931aab03',
+      1: '0x07d5695a24904cc1b6e3bd57cc7780b90618e3c4',
     },
-    name: 'Aave Boar',
-    symbol: 'LEND-ETH UNI-V2 LP',
-    tokenSymbol: 'LEND',
-    icon: '🐗',
+    name: 'Magic Internet Money',
+    symbol: 'MIM-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'MIM',
+    icon: '🚜',
   },
   {
     pid: 6,
     lpAddresses: {
-      1: '0x43ae24960e5534731fc831386c07755a2dc33d47',
+      1: '0x8b00ee8606cc70c2dce68dea0cefe632cca0fb7b', // https://analytics.sushi.com/pairs/0x8b00ee8606cc70c2dce68dea0cefe632cca0fb7b
     },
     tokenAddresses: {
-      1: '0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f',
+      1: '0x8b00ee8606cc70c2dce68dea0cefe632cca0fb7b',
     },
-    name: 'Synthetic Snake',
-    symbol: 'SNX-ETH UNI-V2 LP',
-    tokenSymbol: 'SNX',
-    icon: '🐍',
+    name: 'Wrapped UST Token',
+    symbol: 'UST-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'UST',
+    icon: '🚜',
+  },
+  {
+    pid: 7,
+    lpAddresses: {
+      1: '0xec8c342bc3e07f05b9a782bc34e7f04fb9b44502', // https://analytics.sushi.com/pairs/0xec8c342bc3e07f05b9a782bc34e7f04fb9b44502
+    },
+    tokenAddresses: {
+      1: '0x853d955acef822db058eb8505911ed77f175b99e',
+    },
+    name: 'Frax',
+    symbol: 'FRAX-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'FRAX',
+    icon: '🚜',
+  },
+  {
+    pid: 8,
+    lpAddresses: {
+      1: '0x0f644658510c95cb46955e55d7ba9dda9e9fbec6', // not found, leaving uAD address for now as a placeholder
+    },
+    tokenAddresses: {
+      1: '0x865377367054516e17014ccded1e7d814edc9ce4',
+    },
+    name: 'Dola USD Stablecoin',
+    symbol: 'DOLA-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'DOLA',
+    icon: '🚜',
+  },
+  {
+    pid: 9,
+    lpAddresses: {
+      1: '0xc3d03e4f041fd4cd388c549ee2a29a9e5075882f', //https://analytics.sushi.com/pairs/0xc3d03e4f041fd4cd388c549ee2a29a9e5075882f
+    },
+    tokenAddresses: {
+      1: '0x6b175474e89094c44da98b954eedeac495271d0f',
+    },
+    name: 'Dai Stablecoin',
+    symbol: 'DAI-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'DAI',
+    icon: '🚜',
+  },
+  {
+    pid: 10,
+    lpAddresses: {
+      1: '0x397ff1542f962076d0bfe58ea045ffa2d347aca0', // https://analytics.sushi.com/pairs/0x397ff1542f962076d0bfe58ea045ffa2d347aca0
+    },
+    tokenAddresses: {
+      1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    },
+    name: 'USD Coin',
+    symbol: 'USDC-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'USDC',
+    icon: '🚜',
   },
   {
     pid: 11,
     lpAddresses: {
-      1: '0x2fdbadf3c4d5a8666bc06645b8358ab803996e28',
+      1: '0x0f644658510c95cb46955e55d7ba9dda9e9fbec6', // not found, leaving uAD address for now as a placeholder
     },
     tokenAddresses: {
-      1: '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e',
+      1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
     },
-    name: 'YFI Whale',
-    symbol: 'YFI-ETH UNI-V2 LP',
-    tokenSymbol: 'YFI',
-    icon: '🐋',
+    name: 'Tether USD',
+    symbol: 'USDT-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'USDT',
+    icon: '🚜',
   },
   {
-    pid: 13,
+    pid: 11,
     lpAddresses: {
-      1: '0x8bd1661da98ebdd3bd080f0be4e6d9be8ce9858c',
+      1: '0x0589e281d35ee1acf6d4fd32f1fba60effb5281b', // https://analytics.sushi.com/pairs/0x0589e281d35ee1acf6d4fd32f1fba60effb5281b
     },
     tokenAddresses: {
-      1: '0x408e41876cccdc0f92210600ef50372656052a38',
+      1: '0xbc6da0fe9ad5f3b0d58160288917aa56653660e9',
     },
-    name: 'REN Rhino',
-    symbol: 'REN-ETH UNI-V2 LP',
-    tokenSymbol: 'REN',
-    icon: '🦏',
-  },
-  {
-    pid: 14,
-    lpAddresses: {
-      1: '0xaad22f5543fcdaa694b68f94be177b561836ae57',
-    },
-    tokenAddresses: {
-      1: '0x68A118Ef45063051Eac49c7e647CE5Ace48a68a5',
-    },
-    name: 'BASED Bull',
-    symbol: 'BASE-sUSD UNI-V2 LP',
-    tokenSymbol: 'BASED',
-    icon: '🐂',
-  },
-  {
-    pid: 15,
-    lpAddresses: {
-      1: '0xcc3d1ecef1f9fd25599dbea2755019dc09db3c54',
-    },
-    tokenAddresses: {
-      1: '0x476c5E26a75bd202a9683ffD34359C0CC15be0fF',
-    },
-    name: 'SRM Shark',
-    symbol: 'SRM-ETH UNI-V2 LP',
-    tokenSymbol: 'SRM',
-    icon: '🦈',
-  },
-  {
-    pid: 16,
-    lpAddresses: {
-      1: '0xa5904961f61bae7c4dd8478077556c91bf291cfd',
-    },
-    tokenAddresses: {
-      1: '0xaba8cac6866b83ae4eec97dd07ed254282f6ad8a',
-    },
-    name: 'SUSHIv2 uAR',
-    symbol: 'SUSHIv2-ETH UNI-V2 LP',
-    tokenSymbol: 'SUSHIv2',
-    icon: '🍠',
-  },
-  {
-    pid: 17,
-    lpAddresses: {
-      1: '0x3da1313ae46132a397d90d95b1424a9a7e3e0fce',
-    },
-    tokenAddresses: {
-      1: '0xD533a949740bb3306d119CC777fa900bA034cd52',
-    },
-    name: 'CRV Crocodile',
-    symbol: 'CRV-ETH UNI-V2 LP',
-    tokenSymbol: 'CRV',
-    icon: '🐊',
+    name: 'Alchemix USD',
+    symbol: 'alUSD-ETH SUSHI LP', // needs double-check
+    tokenSymbol: 'alUSD',
+    icon: '🚜',
   },
 ]

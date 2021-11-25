@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
     <StyledLogo to="/">
       <img src={chef} height="32" style={{ marginTop: -4 }} />
       <StyledText>
-        Ubiquity DAO
+        <MasterChefTextBold>Ubiquity DAO</MasterChefTextBold>
         <MasterChefText>End of Cycle Party</MasterChefText>
       </StyledText>
     </StyledLogo>
@@ -38,9 +38,14 @@ const StyledText = styled.span`
   }
 `
 
-const MasterChefText = styled.span`
+const MasterChefText = styled.div`
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 300;
+`
+
+const MasterChefTextBold = styled.div`
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 600;
 `
 
 export default Logo
